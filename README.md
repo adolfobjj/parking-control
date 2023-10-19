@@ -1,4 +1,30 @@
-# Api Rest com CRUD 
-Sistema de estacionamento de condominio onde nao pode ter mais de 1 carro por apartamento ou proprietário e o carro associado apenas a uma vaga.
+# Parking Control API
 
-![image](https://user-images.githubusercontent.com/47535842/193885962-4334b0fe-28e1-4b32-9e5b-41da46fdf9ba.png)
+Esta é uma API de controle de estacionamento desenvolvida em Java com Spring Boot.
+
+## Recursos
+
+- Cadastro de veículos e vaga
+
+
+## Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+
+- Java JDK 8 ou superior
+- Maven
+- Git
+
+Esta é uma API de controle de estacionamento desenvolvida em Java com Spring Boot.
+
+
+A aplicação estará disponível em http://localhost:8080.
+
+Tecnologias Utilizadas
+Spring Boot
+Spring Data JPA
+H2 Database (para desenvolvimento)
+Swagger (para documentação da API)
+Contribuindo
+Este repositório é aberto a contribuições. Sinta-se à vontade para enviar pull requests ou relatar problemas. Contribuições são bem-vindas!
+
