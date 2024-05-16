@@ -31,6 +31,13 @@ Exemplo JSON: <br><br>
 }<br><br>
 Exemplo para GET de consulta de placa: <br>
 http://localhost:8080/parking-spot/car/VDG1989 <br>
+Retorno dessa consulta: <br><br>
+{<br>
+    "block": "5",<br>
+    "responsibleName": "Luiz Adolfo",<br>
+    "apartment": "12"<br>
+}<br><br>
+
 Exemplo para GET All: <br>
 http://localhost:8080/parking-spot<br>
 Exemplo para GET Id: <br>
