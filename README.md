@@ -31,8 +31,10 @@ Exemplo JSON: <br><br>
 }<br><br>
 Exemplo para GET de consulta de placa: <br>
 http://localhost:8080/parking-spot/car/VDG1989 <br>
-
-
+Exemplo para GET All: <br>
+http://localhost:8080/parking-spot<br>
+Exemplo para GET Id: <br>
+http://localhost:8080/parking-spot/{id}<br>
 
 Tecnologias Utilizadas
 Spring Boot
