@@ -7,11 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
+import java.util.Optional;
 
 
 @RestController
@@ -41,6 +44,19 @@ public class ParkingSpotController {
                 .orElseThrow(() ->
                         new ResponseStatusException(HttpStatus.NOT_FOUND,
                                 "Carro não encontrado"));
+    }
+    @GetMapping("/car/{licensePlateCar}")
+    public ResponseEntity<?> getResponsibleByLicensePlate(@PathVariable String licensePlateCar) {
+        Optional<ParkingSpotModel> parkingSpot = parkingSpotService.findByLicensePlateCar(licensePlateCar);
+        if (parkingSpot.isPresent()) {
+            Map<String, String> response = new HashMap<>();
+            response.put("responsibleName", parkingSpot.get().getResponsibleName());
+            response.put("apartment", parkingSpot.get().getApartment());
+            response.put("block", parkingSpot.get().getBlock());
+            return ResponseEntity.ok(response);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Car with license plate " + licensePlateCar + " not found.");
+        }
     }
     @GetMapping
     public List<ParkingSpotModel> find( ParkingSpotModel filtro ){

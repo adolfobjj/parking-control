@@ -24,7 +24,9 @@ public class ParkingSpotService {
     public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {
         return parkingSpotRepository.save(parkingSpotModel);
     }
-
+    public Optional<ParkingSpotModel> findByLicensePlateCar(String licensePlateCar) {
+        return parkingSpotRepository.findByLicensePlateCar(licensePlateCar);
+    }
     public boolean existsByLicensePlateCar(String licensePlateCar) {
         return parkingSpotRepository.existsByLicensePlateCar(licensePlateCar);
     }
