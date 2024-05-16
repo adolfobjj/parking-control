@@ -16,9 +16,9 @@ Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 - Git
 
 Esta é uma API de controle de estacionamento desenvolvida em Java com Spring Boot.
-Método POST < /br>
+Método POST <br>
 http://localhost:8080/parking-spot <br>
-exemplo JSON: < /br>
+exemplo JSON: <br>
 { <br>
     "parkingSpotNumber" : "205B",<br>
     "licensePlateCar" : "VDG1989",<br>
@@ -29,6 +29,8 @@ exemplo JSON: < /br>
     "apartment" : "12",<br>
     "block" : "5"<br>
 }<br>
+exemplo para GET de consulta de placa: <br>
+http://localhost:8080/parking-spot/car/VDG1989 <br>
 
 A aplicação estará disponível em http://localhost:8080.
 
